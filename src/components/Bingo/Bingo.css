@@ -1,27 +1,66 @@
 .tabela {
-  width: 80%;
-  height: 100vh;
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  margin: 0 auto;
-  place-items: center;
+  /* Cria colunas responsivas: mínimo de 60px, máximo preenchendo o espaço */
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 12px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px); /* Efeito de vidro moderno */
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 78, 146, 0.15);
+  margin-top: 1rem;
 }
 
 .casa {
-  border: 1px solid #000;
+  aspect-ratio: 1 / 1;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
-  cursor: pointer;
-  border-radius: 9999px;
-  
-  aspect-ratio: 1 / 1;
-  width: 50px;
-  height: auto;
   font-weight: bold;
+  cursor: pointer;
+  
+  /* Estilo visual da "pedra" */
+  background-color: var(--white);
+  color: var(--primary-blue);
+  border: 2px solid var(--primary-blue);
+  border-radius: 50%; /* Totalmente redondo */
+  
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animação elástica */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  user-select: none;
 }
 
+.casa:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 78, 146, 0.2);
+  background-color: var(--light-blue);
+}
+
+/* Estado Ativo (Número Sorteado) */
 .ativa {
-  background-color: yellow;
+  background-color: var(--primary-blue);
+  color: var(--accent-gold);
+  border-color: var(--accent-gold);
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+  .app-header h1 {
+    font-size: 1.4rem;
+  }
+  
+  .tabela {
+    grid-template-columns: repeat(auto-fit, minmax(45px, 1fr));
+    gap: 8px;
+    padding: 10px;
+  }
+  
+  .casa {
+    font-size: 1.1rem;
+    border-width: 1px;
+  }
 }

@@ -1,15 +1,21 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  background-color: #fff;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --primary-blue: #004e92; /* Azul escuro/real */
+  --light-blue: #e0f7fa;
+  --accent-gold: #ffd700;   /* Dourado para destaque */
+  --text-dark: #2c3e50;
+  --white: #ffffff;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: 'Lato', sans-serif;
+  background: linear-gradient(135deg, var(--light-blue) 0%, #ffffff 100%);
+  color: var(--text-dark);
+  min-height: 100vh;
+}
