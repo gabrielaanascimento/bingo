@@ -1,0 +1,144 @@
+/* src/pages/Home.css */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.home-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: radial-gradient(circle at center, #ffffff 0%, var(--light-blue) 100%);
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  max-width: 1000px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 78, 146, 0.15);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.hero-logo-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-logo-large {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 50%;
+  border: 6px solid var(--accent-gold);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transition: transform 0.5s ease;
+}
+
+.hero-logo-large:hover {
+  transform: scale(1.02);
+}
+
+.hero-form-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hero-form-container h2 {
+  font-family: 'Cinzel', serif;
+  color: var(--primary-blue);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-form-container p {
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.bingo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group label {
+  font-weight: bold;
+  color: var(--primary-blue);
+  font-size: 0.9rem;
+}
+
+.bingo-input {
+  padding: 12px 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.bingo-input:focus {
+  border-color: var(--primary-blue);
+}
+
+.bingo-button {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.bingo-button:hover {
+  background-color: #003d73;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.footer {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  border-top: 4px solid var(--accent-gold);
+}
+
+@media (max-width: 850px) {
+  .hero-section {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+  }
+  
+  .hero-logo-large {
+    max-width: 200px;
+  }
+  
+  .hero-form-container {
+    text-align: center;
+  }
+}
