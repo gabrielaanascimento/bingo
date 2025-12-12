@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import './Home.css'
+import { useNavigate } from 'react-router-dom'
 
 export const Home = () => {
   const [nomeBingo, setNomeBingo] = useState('')
+  const navigate = useNavigate()
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -10,8 +12,8 @@ export const Home = () => {
         alert(`Bingo "${nomeBingo}" iniciado!`)
         window.localStorage.setItem('nomeBingo', nomeBingo)
         setNomeBingo('')
-        window.location.href = '/bingo'
-    }
+        navigate('/bingo')
+      }
   }
 
   return (
