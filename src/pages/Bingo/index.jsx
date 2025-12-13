@@ -18,9 +18,7 @@ export function BingoPage() {
         <Bingo />
       </main>
 
-      <footer className='app-footer'>
-        <p>Paróquia Nossa Senhora de Lourdes</p>
-      </footer>
+    
     </div>
   )
 }

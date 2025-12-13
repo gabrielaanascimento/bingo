@@ -1,8 +1,7 @@
 .tabela {
   width: 100%;
   display: grid;
-  /* Cria colunas responsivas: mínimo de 60px, máximo preenchendo o espaço */
-  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
   gap: 12px;
   padding: 20px;
   background: rgba(255, 255, 255, 0.8);
@@ -20,12 +19,10 @@
   font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
-  
-  /* Estilo visual da "pedra" */
   background-color: var(--white);
   color: var(--primary-blue);
   border: 2px solid var(--primary-blue);
-  border-radius: 50%; /* Totalmente redondo */
+  border-radius: 50%; 
   
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animação elástica */
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
