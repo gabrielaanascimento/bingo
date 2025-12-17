@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Home.css';
 import { useNavigate } from 'react-router-dom';
 import { Modal } from '../../components/Modal';
+import logo from '../../assets/logo-paroquia.jpg';
 
 export const Home = () => {
   const [nomeBingo, setNomeBingo] = useState('');
@@ -14,9 +15,6 @@ export const Home = () => {
 
   const navigate = useNavigate();
 
-  /* =====================
-     MODAL HELPERS
-  ===================== */
   const openModal = (title, message, onConfirm = null) => {
     setModal({ open: true, title, message, onConfirm });
   };
@@ -25,9 +23,6 @@ export const Home = () => {
     setModal({ open: false, title: '', message: '', onConfirm: null });
   };
 
-  /* =====================
-     SUBMIT
-  ===================== */
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -49,16 +44,13 @@ export const Home = () => {
     );
   };
 
-  /* =====================
-     RENDER
-  ===================== */
   return (
     <div className="home-page">
       <main className="home-content">
         <div className="hero-section">
           <div className="hero-logo-container">
             <img
-              src="/logo-paroquia.jpg"
+              src={logo}
               alt="Brasão da Paróquia Nossa Senhora de Lourdes"
               className="hero-logo-large"
             />
