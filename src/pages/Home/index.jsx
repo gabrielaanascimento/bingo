@@ -83,10 +83,6 @@ export const Home = () => {
         </div>
       </main>
 
-      <footer className="footer">
-        <p>Paróquia Nossa Senhora de Lourdes</p>
-      </footer>
-
       {/* MODAL */}
       <Modal
         open={modal.open}

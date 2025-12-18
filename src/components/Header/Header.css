@@ -2,72 +2,65 @@
 .header {
   background-color: var(--primary-blue);
   color: var(--white);
-  padding: 1rem 2rem;
+  padding: 1.5rem 0;
   box-shadow: var(--shadow);
-  border-bottom: 4px solid var(--accent-gold);
-  position: sticky;
+  border-right: 3px solid var(--accent-gold);
+  position: fixed;
+  left: 0;
   top: 0;
-  z-index: 100;
+  bottom: 0;
+  width: 80px; /* Largura fixa, não expande mais */
+  z-index: 1000;
 }
 
 .header-container {
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-}
-
-.header-brand {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  text-decoration: none;
-  color: var(--white);
+  height: 100%;
+  gap: 2.5rem;
 }
 
 .header-logo {
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  object-fit: cover;
   border: 2px solid var(--accent-gold);
-}
-
-.header-title {
-  font-family: 'Cinzel', serif;
-  font-size: 1.2rem;
-  font-weight: bold;
+  object-fit: cover;
 }
 
 .header-nav {
   display: flex;
+  flex-direction: column;
   gap: 20px;
+  width: 100%;
+  align-items: center; /* Centraliza os ícones horizontalmente na barra */
 }
 
 .nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   color: var(--white);
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-  padding: 5px 10px;
-  border-radius: 4px;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
 }
 
-.nav-link:hover {
-  color: var(--accent-gold);
+.nav-icon {
+  font-size: 1.6rem;
+}
+
+/* DESTAQUE DA PÁGINA ATUAL */
+.nav-link.active {
+  background-color: var(--accent-gold);
+  color: var(--primary-blue);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.nav-link:hover:not(.active) {
   background-color: rgba(255, 255, 255, 0.1);
-}
-
-@media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .header-title {
-    display: none; /* Esconde o texto em mobile se necessário */
-  }
+  transform: scale(1.1);
 }
